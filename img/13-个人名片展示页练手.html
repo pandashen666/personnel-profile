@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>我的个人名片</title>
+  <style>
+    /* 1. 复习：全局重置 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      /* 渐变背景 */
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    /* 2. 复习：卡片容器 */
+    .profile-card {
+      background: rgba(255, 255, 255, 0.1);
+      /* 玻璃拟态效果 */
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      width: 350px;
+      box-shadow: 0 10px 30px rgba(132, 57, 57, 0.2);
+    }
+
+    /* 3. 新知识点：圆形头像 */
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      /* 圆形的关键 */
+      border: 3px solid #fff;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    h2 {
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-bottom: 25px;
+    }
+
+    /* 4. 复习：按钮列表 */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .link-btn {
+      background: #fff;
+      color: #764ba2;
+      padding: 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      /* 去掉链接下划线 */
+      font-weight: bold;
+      transition: transform 0.2s, background 0.2s;
+      /* 动画过渡 */
+    }
+
+    /* 5. 新知识点：悬停效果 */
+    .link-btn:hover {
+      transform: translateY(-3px);
+      /* 向上浮动 */
+      background: #f0f0f0;
+    }
+
+    /* 技能区域的 Flex 布局 */
+.skills {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  gap: 10px;               /* 标签之间的缝隙 */
+  margin-bottom: 25px;     /* 和下面的链接按钮拉开距离 */
+  flex-wrap: wrap;         /* 如果标签太多，自动换行 */
+}
+
+/* 单个技能标签的样式 */
+.skill-tag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="profile-card">
+    <!-- 这里你可以换成你自己的图片路径，比如 ./蜡笔小新.jpg -->
+    <img src="../蜡笔小新.jpg" alt="头像" class="avatar">
+    <h2>Your name</h2>
+    <p>lazy peple</p>
+  <!-- 新增的技能区域 -->
+<div class="skills">
+  <span class="skill-tag">HTML5</span>
+  <span class="skill-tag">CSS3</span>
+  <span class="skill-tag">Flexbox</span>
+  <span class="skill-tag">JavaScript (学习中)</span>
+</div>
+    <div class="links">
+      <a href="#" class="link-btn">我的博客</a>
+      <a href="#" class="link-btn">GitHub 仓库</a>
+      <a href="#" class="link-btn">联系我</a>
+    </div>
+  </div>
+
+</body>
+
+</html>
