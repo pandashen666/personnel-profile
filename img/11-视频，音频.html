@@ -1,10 +1,91 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <title>图像标签</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <head> <title>多媒体播放中心</title>
+  <style>
+    /* 基础重置 */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* 返回按钮样式 */
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 14px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s;
+      z-index: 1000;
+    }
+    .back-btn:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: translateX(-5px);
+    }
+
+    /* 播放器容器卡片 */
+    .player-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 40px;
+      width: 100%;
+      max-width: 600px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      color: #fff;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      background: #000;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    /* 装饰用的小标题 */
+    .player-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .player-header h1 {
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+  </style>
 </head>
 
 <body>
@@ -16,12 +97,19 @@
   ← 返回首页
 </a>
 
-  <h2>视频标签</h2>
-  <video src="https://www.bilibili.com/video/BV1MvaVzUEuz?t=239.3&p=12" controls></video>
-  <h2>音频标签</h2>
-  <audio
-    src="https://m701.music.126.net/20251124215229/418d24a0d5046400017fdfb19b5e868a/jdymusic/obj/wo3DlMOGwrbDjj7DisKw/24664154412/9ed9/612b/e601/379221259d1243be42ebdb3a98d3c2b3.mp3?vuutv=pIH5IN5RI28w2a650UYeCIwUM7oVuAvLi90UCciXiIDzrNceL1nHKQMRQ2KX0TXwN/si///thsp/+bw/HnnEFa3o+tTvk/1Ft1dLjRCY10cdYL63NdRUbbR19tiiuO7ubrIlOPpYmmJKPWQg63J8hCN4Scdh5YAMij1ixJqFSMZJovrFQa9WMb7HDGNwtH01+txBIGJI/Vtr5pP1QFRVKmTHQQ8tNyyEnpFEtS8Yb1jqw5eFLvQ79hrfgw3M1ntQzkSGG6Jx/awjcNEVo4MH0zCy6o558DRsheCto3wyICCA3TbNsUjojIR21qBmuu1KCCy2h+5ZIefnm8cl31c4WYx00WOI9iDJ1YMm6SANiJidIsruw8oK/YG3vmo9E1SE&cdntag=bWFyaz1vc193ZWIscXVhbGl0eV9zdGFuZGFyZA"
-    controls></audio>
+  <div class="section">
+    <h2>📺 视频展示</h2>
+ 
+    <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls poster="https://via.placeholder.com/600x340/000/fff?text=Big+Buck+Bunny"></video>
+  </div>
+
+  <div class="section">
+    <h2>🎵 音频欣赏</h2>
+ 
+    <audio
+      src="https://www.w3schools.com/html/horse.mp3"
+      controls></audio>
+  </div>
 
 
 </body>
